@@ -24,7 +24,8 @@ finally run a couple of `gulp` tasks to get everything in order
 
 to start the server simply type
 
-'dnu build` - quick build to check everything is ok
+`dnu build` - quick build to check everything is ok
+
 `dnx web`  - starts the server
 
 All thats left is start up a browser and navigate to `localhost`
