@@ -1,0 +1,25 @@
+{
+  "name": "aspnetcorestarter",
+  "description": "starter aspnet core website that contains responsive header and footer built using node.js",
+  "main": "app.js",
+  "authors": [
+    "Scott Williamson"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/src/client/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "jquery": "^2.2.1",
+    "font-awesome": "4.5.0"
+  }
+}

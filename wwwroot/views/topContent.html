@@ -1,0 +1,10 @@
+<div id="top-content">
+    <h1>{{ vm.title }}</h1>
+    <p class="p-headline">{{ vm.description}}</p>
+    <ul>
+        <li ng-repeat="item in vm.importantItems">
+            <h3>{{ item.technology }}</h3>
+            <p>{{ item.positives }}</p>
+        </li>    
+    </ul>
+</div>

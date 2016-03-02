@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <link rel="stylesheet" href="/css/libs/hamburger.css" />
+        <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,700' rel='stylesheet' type='text/css'>
+        
+        <!--inject:css-->
+        <!--endinject-->
+        
+        <title>AspNet Core 1.0 Starter Web</title>       
+    </head>
+    
+    <body ng-app="core-starter">
+        <!--header appears on desktop screen sizes (769px and above) -->
+       <header role="banner" class="header" shrink-nav shrink-height="50">           
+            <div class="wrapper">                
+                <a href="/#/home" class="home-nav">
+                    <span class="branding-logo">
+                        Asp.Net Core starter website
+                    </span>
+                </a>
+                <nav class="main-nav main-nav-desktop">
+                    <ul class="nav-list">                      
+                        <li class="nav-item">
+                            <a href="/#/about">about</a>
+                        </li>
+                         <li class="nav-item">
+                            <a href="/#/contact">contact</a>
+                        </li>
+                    </ul>
+                </nav>             
+            </div>
+        </header>
+        
+        <!-- hamburger appears on screens below 768px (tablet) -->
+        <div class="hamburger-holder" ng-controller="navigationController as vm">
+            <button class="c-hamburger c-hamburger--htx"
+                    ng-click="vm.hamburgerMenuClicked()"
+                    ng-class="{ 'is-active': hamburgerMenuActive === true }">
+                <span>toggle menu</span>
+            </button>
+        </div> 
+        
+                     
+        <!-- mobile-nav Activated when user clicks hamburger menu
+             --> 
+         <div class="mobile-nav" ng-controller="navigationController as vm"                
+                ng-class="{ 'mobile-nav-active': hamburgerMenuActive === true }">
+            <ul class="mobile-nav-list">
+                <li class="nav-item">
+                    <a href="/#/home" ng-click="vm.closeMobileMenu()">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/#/about" ng-click="vm.closeMobileMenu()">about</a>
+                </li>   
+                <li class="nav-item">
+                    <a href="/#/contact" ng-click="vm.closeMobileMenu()">contact</a>
+                </li>     
+            </ul>
+        </div>  
+                   
+        <div class="main-content">
+            <div class="container-fluid">  
+                @RenderBody()               
+                <ui-view></ui-view>    
+                          
+            </div>
+       </div>        
+       
+       <footer class="footer">
+           <div class="footer-section footer--home-width">
+               <a href="/#/home" class="home-nav">
+                   Asp.Net Core starter website 
+                </a>
+           </div> 
+            <div class="footer-section footer--nav-width">
+                <div class="footer-nav">            
+                    <ul class="footer-nav-list">
+                        <li class="nav-item">
+                            <a href="/#/home" ng-click="closeMobileMenu()">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#/about">about</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a href="/#/contact">contact</a>
+                        </li>     
+                    </ul>
+            </div>          
+           </div> 
+           <div class="footer-section footer--social-width">
+            <div class="footer-social">
+                <ul class="social">                       
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com">
+                                <i class="fa fa-linkedin fa-2x"></i>
+                            </a> 
+                        </li>    
+                        <li>
+                            <a target="_blank" href="http://www.twitter.com">
+                                <i class="fa fa-stack-overflow fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com">
+                                <i class="fa fa-github fa-2x"></i>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+           </div> 
+        </footer>
+        
+        <!--bower:js-->
+       <!--endbower-->
+        
+        <!--inject:js-->
+        <!--endinject-->
+    </body>
+</html>
