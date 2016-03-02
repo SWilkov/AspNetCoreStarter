@@ -20,7 +20,7 @@ finally run a couple of `gulp` tasks to get everything in order
 
 `gulp compile-ts`  will compile the typescript files into javascript then
 
-`gulp-inject`  will add all the relevant bower, js, css into **_Layout.cshtml
+`gulp-inject`  will add all the relevant bower, js, css into **_Layout.cshtml**
 
 to start the server simply type
 
