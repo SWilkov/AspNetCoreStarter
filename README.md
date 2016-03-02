@@ -13,8 +13,8 @@ Asp.Net Core uses the `DNX` engine to manage packages that are found in `project
 
 next we need to install node and bower packages so run
 
-'npm install'
-'bower install'
+`npm install`
+`bower install`
 
 finally run a couple of `gulp` tasks to get everything in order
 
